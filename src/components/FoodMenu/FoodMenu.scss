@@ -1,0 +1,33 @@
+.foodMenu
+{
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+@media screen and (min-width:768px)
+{
+    .foodMenu
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width:992px)
+{
+    .foodMenu
+    {
+        width: 85vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:1140px)
+{
+    .foodMenu
+    {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

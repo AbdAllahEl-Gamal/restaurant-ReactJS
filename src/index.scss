@@ -1,0 +1,43 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+$font: 'Open Sans', sans-serif;
+
+$mainBlack: #222;
+$mainGreen: #82b340;
+$mainRed: #d61313;
+$mainWhite: #fff;
+$mainGrey: #ececec;
+
+body
+{
+	background: $mainWhite;
+	color: $mainBlack;
+	font-family: $font;
+}
+
+::-webkit-scrollbar 
+{
+	width: 5px;
+}
+  
+::-webkit-scrollbar-track 
+{
+	box-shadow: inset 0 0 5px $mainGrey; 
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+	background: $mainRed; 
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+	background: $mainRed; 
+}

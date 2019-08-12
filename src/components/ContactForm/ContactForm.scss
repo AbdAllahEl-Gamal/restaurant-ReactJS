@@ -1,0 +1,58 @@
+@import '../../index.scss';
+
+.container
+{
+    border-radius: 10px;
+    background: $mainGrey;
+    padding: 20px;
+    width: 80%;
+    margin: 30px auto 0px;
+    box-shadow: 5px 10px #888888;
+    h1 
+    {
+        text-align: center;
+    }
+}
+
+.contactForm
+{
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+input[type=submit] 
+{
+    background-color: $mainRed;
+    color: $mainWhite;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type=text], input[type=email], select, textarea 
+{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+.requiredInput
+{
+  color: $mainRed;
+}
+
+.error
+{
+  color: $mainRed;
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -1,0 +1,54 @@
+@import '../../index.scss';
+
+.navbar
+{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background: $mainGrey;
+	padding: 0.5rem 1rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	z-index: 1;
+	img
+	{
+		width: 50px;
+		height: 50px;
+	}
+}
+
+.nav-links
+{
+	align-self: center;
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	text-align: center;
+}
+
+.nav-link
+{
+	color: $mainBlack;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-size: 1.2rem;
+	transition: all 0.3s linear;
+	&:hover {
+		color: $mainRed;
+	}
+}
+
+.active
+{
+	color: $mainRed;
+}
+
+a:link, a:visited, a:hover, a:active 
+{
+	text-decoration: none;
+}
+
+a
+{
+	color: $mainBlack;
+}
