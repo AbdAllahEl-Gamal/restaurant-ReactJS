@@ -1,8 +1,47 @@
+@import '../../index.scss';
+
+.foodMenuContainer
+{
+    margin-top: 80px;
+}
+
 .foodMenu
 {
     width: 70vw;
     margin: 0 auto;
-    margin-top: 80px;
+}
+
+.searchField
+{
+    display: block;
+    width: 15rem !important;
+    height: 40px;
+    background-color: $mainGrey;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.searchField::-webkit-input-placeholder 
+{
+    text-align: center;
+}
+ 
+.searchField:-moz-placeholder 
+{
+    text-align: center;  
+}
+ 
+.searchField::-moz-placeholder 
+{
+    text-align: center;  
+}
+ 
+.searchField:-ms-input-placeholder 
+{  
+    text-align: center; 
 }
 
 @media screen and (min-width:768px)

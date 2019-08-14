@@ -7,7 +7,7 @@ import foodData from '../foodData';
 
 function FoodMenu() {	
 	const [state, setState] = useState({
-		foods: foodData
+        foods: foodData
 	});
 	
     const removeFood = id => {
@@ -17,14 +17,31 @@ function FoodMenu() {
 			foods: sortedFoods
 		});
     };
+
+    const handleSearch = event => {
+        var searchQuery = event.target.value.toLowerCase();
+        var displayedFoods = foodData.filter(food => {
+            var searchValue = food.name.toLowerCase();
+            console.log(searchValue.indexOf(searchQuery));
+            return searchValue.indexOf(searchQuery) !== -1;
+        });
+    
+        setState({
+          foods: displayedFoods
+        });
+       
+      };
 	
 	const { foods } = state;
 	const foodComponents = foods.map(food => <Food key={food.id} food={food} removeFood={removeFood}/>);
 	
     return (
-	   <section className="foodMenu">
-		   {foodComponents} 
-	   </section> 
+        <section className="foodMenuContainer">
+            <input type="text" className="searchField" placeholder="Search" onChange={handleSearch} />
+            <div className="foodMenu">
+                {foodComponents}
+	        </div> 
+        </section>
     );	
 }
 
